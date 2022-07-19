@@ -1,0 +1,13 @@
+{
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "./app.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./app.js"
+  },
+  "dependencies": {
+    "node-ssi": "0.3.2"
+  }
+}
