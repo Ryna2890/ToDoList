@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <script src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="index.js"></script>
+    <script src="common/button_edit/index.js"></script>
     <link rel="stylesheet" href="layout_style.css">
     <link rel="stylesheet" href="common/input/input_style.css">
+    <link rel="stylesheet" href="common/button_edit/button_edit_style.css">
     <title>To do List</title>
 </head>
 <body>
@@ -15,10 +20,12 @@
         </div>
         <div class="layout__list_done">
             <h1>DONE</h1>
+
         </div>
     </div>
     <div class="layout__input">
         <!--#include file="/common/input/index.shtml"-->
+        <!--#include file="/common/button_edit/index.shtml"-->
 
     </div>
 </div>
