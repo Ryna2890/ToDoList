@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="common/input/input_style.css">
     <link rel="stylesheet" href="common/button_edit/button_edit_style.css">
     <link rel="stylesheet" href="common/delete_button/delete_button_style.css">
+    <link rel="stylesheet" href="common/checkbox/checkbox_open/checkbox_open_style.css">
+    <link rel="stylesheet" href="common/checkbox/checkbox_closed/checkbox_closed_style.css">
     <title>To do List</title>
 </head>
 <body>
@@ -19,7 +21,8 @@
         <div class="layout__list_do">
             <h1>DO</h1>
             <!--#include file="/common/delete_button/index.shtml"-->
-
+            <!--#include file="/common/checkbox/checkbox_open/index.shtml"-->
+            <!--#include file="/common/checkbox/checkbox_closed/index.shtml"-->
         </div>
         <div class="layout__list_done">
             <h1>DONE</h1>
