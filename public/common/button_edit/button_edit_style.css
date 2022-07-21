@@ -9,3 +9,8 @@
     font-size: 16px;
     font-weight: 700;
 }
+
+.button:hover {
+    background: linear-gradient(274.42deg, #5e78ff 0%, #9DCEFF 124.45%);
+    cursor: pointer;
+}
