@@ -8,6 +8,7 @@
     <script src="index.js"></script>
     <script src="common/button_edit/index.js"></script>
     <link rel="stylesheet" href="layout_style.css">
+    <link rel="stylesheet" href="common/input/input_style.css">
     <link rel="stylesheet" href="common/button_edit/button_edit_style.css">
     <title>To do List</title>
 </head>
@@ -23,6 +24,7 @@
         </div>
     </div>
     <div class="layout__input">
+        <!--#include file="/common/input/index.shtml"-->
         <!--#include file="/common/button_edit/index.shtml"-->
 
     </div>
