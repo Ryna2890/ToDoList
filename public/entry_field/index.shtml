@@ -1,0 +1,4 @@
+<div class="field">
+    <div><!--#include file="/common/input/index.shtml"--></div>
+    <div><!--#include file="/common/button_edit/index.shtml"--></div>
+</div>
