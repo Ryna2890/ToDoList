@@ -1,0 +1,6 @@
+.field{
+    display: flex;
+    padding-top: 26px;
+    padding-bottom: 40px;
+    justify-content: center;
+}
