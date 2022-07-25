@@ -1,19 +1,26 @@
-const buttonAdd = document.querySelector('.button');
+const field = document.querySelector('.field');
+const buttonAdd = field.querySelector('.field__submitButton');
+const textFromInput = field.querySelector('.field__input')
+
+let inputValue = "input is empty"
+
+textFromInput.addEventListener('input', (event)=>{
+     inputValue = event.target.value
+})
+
 buttonAdd.addEventListener('click',()=>{
-    const textFromInput = document.querySelector('.input').value
     const move = new CustomEvent('passText',{
         bubbles: true,
-        cancelable: true,
-        composed: false,
-        detail:{
-            text:textFromInput,
+        detail: {
+            text: inputValue,
         }
     })
     buttonAdd.dispatchEvent(move)
     clearText()
 })
+
 function clearText(){
-    document.querySelector('.input').value=''
+    field.querySelector('.field__input input').value=''
 }
 
 
