@@ -1,0 +1,10 @@
+.task{
+    display: flex;
+    width: 315px;
+    margin: 16px 16px;
+    background-color: #A5A6F63D;
+}
+.task__text{
+    padding: 12px 41px 20px 44px;
+
+}
