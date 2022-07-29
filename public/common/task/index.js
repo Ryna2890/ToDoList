@@ -18,6 +18,7 @@ function addButtonDelete(taskItem) {
             let deleteButton = document.createElement('div');
             taskItem.insertAdjacentElement('beforeend', deleteButton)
             deleteButton.innerHTML = text;
+            addDeleteClickListener(deleteButton)
         })
 }
 

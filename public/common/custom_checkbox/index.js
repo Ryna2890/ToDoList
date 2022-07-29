@@ -1,12 +1,12 @@
-const customCheckbox = document.querySelector('.custom_checkbox')
-
-customCheckbox.addEventListener("change", (event) => {
-    let isChecked = event.target.checked
-    const checkedEvent = new CustomEvent("checkboxClick", {
-        detail: {
-            condition: isChecked,
-        },
-        bubbles: true,
+function addCheckboxListener(checkbox){
+    checkbox.addEventListener("change", (event) => {
+        let isChecked = event.target.checked
+        const checkedEvent = new CustomEvent("checkboxClick", {
+            detail: {
+                condition: isChecked,
+            },
+            bubbles: true,
+        })
+        checkbox.dispatchEvent(checkedEvent)
     })
-    customCheckbox.dispatchEvent(checkedEvent)
-})
+}
