@@ -1,4 +1,2 @@
-<div class="custom_checkbox">
-    <input class="custom_checkbox_input" type="checkbox" id="custom_checkbox_input_id">
-    <label class="custom_checkbox_label" for="custom_checkbox_input_id"></label>
-</div>
+<input class="custom_checkbox" type="checkbox">
+
