@@ -1,12 +1,16 @@
-const deleteButton = document.querySelector('.delete_button')
-
-deleteButton.addEventListener("click", (event) => {
-    let targetClick = event.target
-    const clickEvent = new CustomEvent("deleteEvent", {
-        detail: {
-            click: targetClick,
-        },
-        bubbles: true,
+function addDeleteClickListener(element){
+    element.addEventListener("click", (event) => {
+        let targetClick = event.target
+        const clickEvent = new CustomEvent("deleteEvent", {
+            detail: {
+                click: targetClick,
+            },
+            bubbles: true,
+        })
+        element.dispatchEvent(clickEvent)
     })
-    deleteButton.dispatchEvent(clickEvent)
-})
+}
+
+
+
+
