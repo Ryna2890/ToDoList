@@ -2,7 +2,7 @@ const field = document.querySelector('.field');
 const buttonAdd = field.querySelector('.field__submitButton');
 const textFromInput = field.querySelector('.field__input')
 
-let inputValue = "input is empty"
+let inputValue
 
 textFromInput.addEventListener('input', (event)=>{
      inputValue = event.target.value
@@ -15,13 +15,17 @@ buttonAdd.addEventListener('click',()=>{
             text: inputValue,
         }
     })
-    buttonAdd.dispatchEvent(move)
-    clearText()
+    if (inputValue){
+        buttonAdd.dispatchEvent(move)
+        clearText()
+    }
 })
 
 function clearText(){
     field.querySelector('.field__input input').value=''
+    inputValue=''
 }
+
 
 
 

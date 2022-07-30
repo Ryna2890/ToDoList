@@ -7,18 +7,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <script src="index.js" defer></script>
     <script src="common/button_edit/index.js" defer></script>
+    <script src="common/delete_button/index.js" defer></script>
     <script src="common/custom_checkbox/index.js" defer></script>
     <script src="index.js" defer></script>
     <script src="common/button_edit/index.js" defer></script>
     <script src="entry_field/index.js" defer></script>
     <script src="common/task/index.js" defer></script>
     <link rel="stylesheet" href="layout_style.css">
-    <link rel="stylesheet" href="common/input/input_style.css">
     <link rel="stylesheet" href="common/button_edit/button_edit_style.css">
     <link rel="stylesheet" href="common/delete_button/delete_button_style.css">
     <link rel="stylesheet" href="/entry_field/entry_field_style.css">
     <link rel="stylesheet" href="common/custom_checkbox/custom_checkbox_style.css">
     <link rel="stylesheet" href="common/task/task_style.css">
+
     <title>To do List</title>
 </head>
 <body>
@@ -35,7 +36,8 @@
         </div>
     </div>
     <div class="layout__input">
-        <!--#include file="/entry_field/index.shtml"-->
+        <!--#include file="/common/button_edit/index.shtml"-->
+
     </div>
 </div>
 </body>
