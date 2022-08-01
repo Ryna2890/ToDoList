@@ -35,8 +35,7 @@
         </div>
     </div>
     <div class="layout__input">
-        <!--#include file="/entry_field/index.shtml"-->
-
+        <!--#include file="/common/entry_field/index.shtml"-->
     </div>
 </div>
 </body>
