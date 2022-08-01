@@ -1,2 +1,3 @@
-<input class="custom_checkbox" type="checkbox" id="custom_checkbox_input_id">
+<input class="custom_checkbox" type="checkbox">
+
 
