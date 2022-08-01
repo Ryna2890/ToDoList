@@ -32,6 +32,7 @@
         </div>
         <div class="layout__list_done">
             <h1>Done</h1>
+            <div class="layout__list_done_task"></div>
         </div>
     </div>
     <div class="layout__input">
