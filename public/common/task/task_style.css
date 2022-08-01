@@ -1,10 +1,42 @@
-.task{
+.task {
     display: flex;
     width: 315px;
     margin: 16px 16px;
     background-color: #A5A6F63D;
+    border-radius: 8px;
 }
-.task__text{
-    padding: 12px 41px 20px 44px;
 
+.task__text {
+    width: 230px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    word-break: break-all;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background: rgba(165, 166, 246, 0.24);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3F46D6;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9DCEFF;
+}
+
+::-webkit-scrollbar-button:single-button {
+    background-color: #A5A6F63D;
+    display: block;
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:decrement {
+    background-position: center 4px;
+}
+
+::-webkit-scrollbar-button:single-button:vertical:increment {
+    background-position: center 2px;
 }

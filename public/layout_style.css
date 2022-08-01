@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.layout {
+    height: 100vh;
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.layout__list_do {
+    width: 363px;
+    height: 490px;
+    margin: 25px;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.layout__list_do_task {
+    height: 405px;
+    width: 345px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.layout__list_done {
+    width: 363px;
+    height: 490px;
+    margin: 25px;
+    border-radius: 16px;
+    background: #fff;
+}
+
+.layout__list {
+    display: flex;
+    justify-content: center;
+}

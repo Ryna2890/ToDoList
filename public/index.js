@@ -1,5 +1,5 @@
 const root = document.querySelector('.layout');
-const taskListDo = document.querySelector('.layout__list_do');
+const taskListDo = document.querySelector('.layout__list_do_task');
 
 root.addEventListener('passText', (event) => {
   let taskText = event.detail.text;
