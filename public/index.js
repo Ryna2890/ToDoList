@@ -1,5 +1,7 @@
 const root = document.querySelector('.layout');
+const taskListDone = document.querySelector('.layout__list_done');
 const taskListDo = document.querySelector('.layout__list_do_task');
+
 
 root.addEventListener('passText', (event) => {
   let taskText = event.detail.text;
@@ -12,10 +14,20 @@ function addTaskToList(taskItem) {
   taskListDo.appendChild(taskItem);
 }
 
-taskListDo.addEventListener('deleteEvent', (event) => {
+root.addEventListener('deleteEvent', (event) => {
   event.target.parentNode.remove();
 });
 
 root.addEventListener('checkboxClick', (event) => {
-  console.log(event.detail);
+  let checkboxCondition = event.detail.condition;
+  let checkbox = event.target;
+  doneByReplace(checkboxCondition, checkbox);
 });
+
+function doneByReplace(condition, target) {
+  if (condition) {
+    taskListDone.appendChild(target.parentNode);
+  } else {
+    taskListDo.appendChild(target.parentNode);
+  }
+}

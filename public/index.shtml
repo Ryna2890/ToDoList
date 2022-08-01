@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="common/delete_button/delete_button_style.css">
     <link rel="stylesheet" href="/common/entry_field/entry_field_style.css">
     <link rel="stylesheet" href="common/custom_checkbox/custom_checkbox_style.css">
+    <link rel="stylesheet" href="common/input/input_style.css">
     <link rel="stylesheet" href="common/task/task_style.css">
     <link rel="stylesheet" href="common/input/input_style.css">
     <title>To do List</title>
@@ -26,7 +27,7 @@
 <div class="layout">
     <div class="layout__list">
         <div class="layout__list_do">
-            <h1>Do</h1>
+           <h1>Do</h1>
             <div class="layout__list_do_task"></div>
         </div>
         <div class="layout__list_done">
