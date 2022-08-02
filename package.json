@@ -8,7 +8,6 @@
     "start": "node ./app.js"
   },
   "dependencies": {
-    "node-ssi": "0.3.2",
-    "prettier": "^2.7.1"
+    "node-ssi": "0.3.2"
   }
 }
