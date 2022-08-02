@@ -1,0 +1,16 @@
+.button{
+    width: 163px;
+    height: 60px;
+    border-radius: 8px;
+    background: linear-gradient(274.42deg, #92A3FD 0%, #9DCEFF 124.45%);
+    text-align: center;
+    color: #FFFFFF;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: linear-gradient(274.42deg, #9DCEFF 0%, #92A3FD 124.45%);
+}
