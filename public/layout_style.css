@@ -47,9 +47,6 @@ h1 {
     background: rgba(165, 166, 246, 0.24);
 }
 
-
-
-
 .layout__list_done_task {
     height: 405px;
     width: 345px;
@@ -58,7 +55,7 @@ h1 {
 }
 .layout__list_done_task::-webkit-scrollbar {
     width: 4px;
-    background: #D9D9D9;
+    background: rgba(217, 217, 217, 0.24);
 }
 
 ::-webkit-scrollbar-button:single-button:vertical:decrement {

@@ -26,7 +26,7 @@ root.addEventListener('checkboxClick', (event) => {
 function doneByReplace(condition, target) {
   if (condition) {
     taskListDone.appendChild(target.parentNode);
-    target.parentNode.style.backgroundColor = '#D9D9D9';
+    target.parentNode.style.backgroundColor = 'rgba(217, 217, 217, 0.24)';
   } else {
     taskListDo.appendChild(target.parentNode);
     target.parentNode.style.backgroundColor = '#A5A6F63D';

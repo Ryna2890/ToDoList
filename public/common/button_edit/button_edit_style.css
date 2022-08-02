@@ -12,5 +12,5 @@
 
 .button:hover {
     cursor: pointer;
-    filter: invert(10%);
+    background: linear-gradient(274.42deg, #9DCEFF 0%, #92A3FD 124.45%);
 }
