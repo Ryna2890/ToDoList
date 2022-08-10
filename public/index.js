@@ -13,6 +13,10 @@ function addTaskToList(taskItem) {
   taskListDo.appendChild(taskItem);
 }
 
+function addTaskToListDone(taskItem) {
+  taskListDone.appendChild(taskItem);
+}
+
 root.addEventListener('deleteEvent', (event) => {
   event.target.parentNode.remove();
 });
@@ -32,3 +36,23 @@ function doneByReplace(condition, target) {
     target.parentNode.style.backgroundColor = '#A5A6F63D';
   }
 }
+
+async function getTasks() {
+  let response = await fetch('https://jsonplaceholder.typicode.com/todos');
+  let content = await response.json();
+
+  for (let todo of content) {
+    let dataTasksText = todo.title;
+    let completed = todo.completed;
+    let task = createTaskWithChildren(dataTasksText);
+
+    if (completed) {
+      addTaskToList(task);
+    } else {
+      addTaskToListDone(task);
+      task.parentNode.style.backgroundColor = '#A5A6F63D';
+    }
+  }
+}
+
+getTasks();
