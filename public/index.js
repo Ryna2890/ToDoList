@@ -1,30 +1,41 @@
 const root = document.querySelector('.layout');
 const taskListDone = document.querySelector('.layout__list_done_task');
 const taskListDo = document.querySelector('.layout__list_do_task');
+const toDoApi = new TaskApi('https://jsonplaceholder.typicode.com');
+
+toDoApi.read().then((content) => loadTask(content));
 
 root.addEventListener('passText', (event) => {
   let taskText = event.detail.text;
+  let id = Date.now();
+  let status = false;
+  const params = {
+    text: taskText,
+    status,
+    id,
+  };
 
-  let task = createTaskWithChildren(taskText);
-  addTaskToList(task);
+  let task = createTaskWithChildren(params);
+  addTaskToList(task, taskListDo);
+  toDoApi.create(params);
 });
 
-function addTaskToList(taskItem) {
-  taskListDo.appendChild(taskItem);
-}
-
-function addTaskToListDone(taskItem) {
-  taskListDone.appendChild(taskItem);
+function addTaskToList(taskItem, taskList) {
+  taskList.appendChild(taskItem);
 }
 
 root.addEventListener('deleteEvent', (event) => {
   event.target.parentNode.remove();
+  let id = event.target.parentNode.getAttribute('data-id');
+  toDoApi.delete(id);
 });
 
 root.addEventListener('checkboxClick', (event) => {
   let checkboxCondition = event.detail.condition;
   let checkbox = event.target;
+  let id = event.target.parentNode.getAttribute('data-id');
   doneByReplace(checkboxCondition, checkbox);
+  toDoApi.update(id, checkboxCondition);
 });
 
 function doneByReplace(condition, target) {
@@ -37,22 +48,16 @@ function doneByReplace(condition, target) {
   }
 }
 
-async function getTasks() {
-  let response = await fetch('https://jsonplaceholder.typicode.com/todos');
-  let content = await response.json();
-
+function loadTask(content) {
   for (let todo of content) {
-    let dataTasksText = todo.title;
-    let completed = todo.completed;
-    let task = createTaskWithChildren(dataTasksText);
+    const { title: text, completed: status, id } = todo;
+    let task = createTaskWithChildren({ text, status, id });
 
-    if (completed) {
-      addTaskToList(task);
+    if (status) {
+      addTaskToList(task, taskListDone);
+      task.style.backgroundColor = '#D9D9D9';
     } else {
-      addTaskToListDone(task);
-      task.parentNode.style.backgroundColor = '#A5A6F63D';
+      addTaskToList(task, taskListDo);
     }
   }
 }
-
-getTasks();
